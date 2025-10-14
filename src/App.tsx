@@ -1,4 +1,3 @@
-\
 import React, { useMemo, useState, useEffect } from "react";
 import { DollarSign, Percent, Users, Copy, RefreshCcw, Moon, Sun } from "lucide-react";
 
