@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from "react";
 import { DollarSign, Percent, Users, Copy, RefreshCcw, Moon, Sun } from "lucide-react";
 
-function classNames(...cls: (string | false | null | undefined)[]) {
+function classNames(...cls: any[]) {
   return cls.filter(Boolean).join(" ");
 }
 
@@ -193,7 +193,8 @@ function LabeledInput(
       <span className="text-sm font-medium">{label}</span>
       <div className="relative mt-1">
         {icon && <span className="absolute inset-y-0 left-3 flex items-center text-slate-400">{icon}</span>}
-        <input {...rest} className={classNames("w-full rounded-2xl border px-3 py-2.5 text-sm outline-none", icon && "pl-9", className)} />
+        <input {...rest} className={classNames("w-full rounded-2xl border px-3 py-2.5 text-sm outline-none", icon ? "pl-9" : "",
+ className)} />
       </div>
     </label>
   );
